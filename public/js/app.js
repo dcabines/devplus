@@ -9,16 +9,18 @@ angular.module('myApp', [
   'myApp.directives',
   'myApp.controllers'
 ])
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+  $locationProvider.html5Mode(true);
+
   $urlRouterProvider.otherwise("/state1");
 
   $stateProvider
-    .state('state1', {
-      url: "/state1",
+    .state('home', {
+      url: "/",
       templateUrl: "partials/partial1.html"
     })
-    .state('state2', {
-      url: "/state2",
+    .state('about', {
+      url: "/about",
       templateUrl: "partials/partial2.html"
     });
 });
