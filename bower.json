@@ -4,8 +4,8 @@
   "directory": "public/",
   "dependencies": {
     "angular": "*",
-    "angular-route": "*",
     "angular-ui": "*",
+    "angular-ui-router": "*",
     "bootstrap": "*"
   }
 }

@@ -1,6 +1,6 @@
-module.exports = function (app) {
-    // home page
-    app.get('/', function (req, res) {
-        res.render('index', { title: 'Home Page.  ' })
-    });
-}
+var express = require('express');
+
+module.exports = express.Router()
+	.get('/', function(req, res, next) {
+		res.render('index', { title: 'Home Page' });
+	});

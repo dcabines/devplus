@@ -1,13 +1,14 @@
 doctype html
-html.no-js(lang='en', ng-app='myApp')
-head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    title My AngularJS App
-    meta(name='description', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    script(src='js/appInsights.js')
-    block styles
-  body
-    block content
-    block scripts
+html(lang='en', ng-app='myApp')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title My AngularJS App
+        meta(name='description', content='')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        script(src='js/appInsights.js')
+        block styles
+
+      body
+        block content
+        block scripts
