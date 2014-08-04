@@ -9,11 +9,6 @@ var uglify = require('gulp-uglify');
 var less = require('gulp-less');
 var minify = require('gulp-minify-css');
 
-// clean
-gulp.task('clean', function(){
-	return gulp.src(['dist/*'], { read: false, }).pipe(clean());
-});
-
 // lint
 gulp.task('lint', function(){
 	gulp.src('./src/scripts/*.js')
@@ -27,14 +22,14 @@ gulp.task('lint', function(){
 
 // compile
 gulp.task('compile', function(){
-	gulp.src(['src/scripts/app.js'])
+	gulp.src(['./src/scripts/app.js'])
 	.pipe(browserify({
 		insertGlobals: true,
 		debug: true
 	}))
 	.pipe(concat('bundle.js'))
 	.pipe(uglify())
-	.pipe(gulp.dest('dist/public/js'));
+	.pipe(gulp.dest('./public/js'));
 
 	gulp.src([
 		'bower_components/bootstrap/less/bootstrap.less',
@@ -44,22 +39,22 @@ gulp.task('compile', function(){
 	.pipe(less())
 	.pipe(concat('bundle.css'))
 	.pipe(minify())
-	.pipe(gulp.dest('dist/public/css'));
+	.pipe(gulp.dest('./public/css'));
 });
 
 // copy
-gulp.task('copy', ['clean', 'compile'], function(){
+gulp.task('copy', ['compile'], function(){
 	gulp.src('./src/partials/**/*')
-	.pipe(gulp.dest('dist/public/partials/'));
+	.pipe(gulp.dest('./public/partials/'));
 
 	gulp.src('./src/styles/**/*')
-	.pipe(gulp.dest('dist/public/css/'));
-
-	gulp.src('./src/server/**/*')
-	.pipe(gulp.dest('dist'));
+	.pipe(gulp.dest('./public/css/'));
 
 	gulp.src('./bower_components/**/*')
-	.pipe(gulp.dest('dist/public/components/'));
+	.pipe(gulp.dest('./public/components/'));
+
+	gulp.src('./src/server/**/*')
+	.pipe(gulp.dest('./'));
 });
 
 gulp.task('default', ['copy']);
