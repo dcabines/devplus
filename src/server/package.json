@@ -1,0 +1,12 @@
+{
+	"name": "devplus",
+	"version": "2.0.0",
+	"private": true,
+	"scripts": {
+		"start": "node server"
+	},
+		"dependencies": {
+		"express": "*",
+		"jade": "*"
+	}
+}

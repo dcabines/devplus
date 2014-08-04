@@ -1,7 +1,6 @@
 {
   "name": "test",
   "version": "1.0.0",
-  "directory": "public/",
   "dependencies": {
     "angular": "*",
     "angular-ui": "*",
