@@ -1,23 +1,22 @@
 {
-  "name": "devplus",
-  "version": "2.0.0",
-  "private": true,
-  "scripts":{
-    "start":"node server.js"
-  },
-  "dependencies": {
-    "express": "*",
-    "jade": "*"
-  },
-  "devDependencies": {
-    "gulp": "*",
-    "browserify": "*",
-    "gulp-clean": "*",
-    "gulp-concat": "*",
-    "gulp-jshint": "*",
-    "gulp-browserify": "*",
-    "gulp-uglify": "*",
-    "gulp-less": "*",
-    "gulp-minify-css": "*"
-  }
+	"name": "devplus",
+	"version": "2.0.0",
+	"private": true,
+	"scripts":{
+		"start":"node server.js"
+	},
+	"dependencies": {
+		"express": "*",
+		"jade": "*"
+	},
+		"devDependencies": {
+		"gulp": "*",
+		"browserify": "*",
+		"gulp-concat": "*",
+		"gulp-jshint": "*",
+		"gulp-browserify": "*",
+		"gulp-uglify": "*",
+		"gulp-less": "*",
+		"gulp-minify-css": "*"
+	}
 }
