@@ -8,15 +8,16 @@ html(lang='en', ng-app='devplus')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		link(rel='stylesheet', href='css/bundle.css')
 		block styles
-		script(src='js/appInsights.js')
+		script
+			include js/appInsights.js
 
 	body
-		include ./navbar.jade
+		include navbar.jade
 		div.container
 			div.row
 				div.col-md-12
 					block content
-		include ./footer.jade
+		include footer.jade
 
 		script(src='js/bundle.js')
 		block scripts

@@ -27,7 +27,7 @@ gulp.task('browserify', function(){
 gulp.task('uglify', function(){
 	return gulp.src(['src/js/appInsights.js'])
 	.pipe(uglify())
-	.pipe(gulp.dest('public/js'));
+	.pipe(gulp.dest('views/js'));
 });
 
 // minify
@@ -43,4 +43,10 @@ gulp.task('minify', function(){
 	.pipe(gulp.dest('public/css'));
 });
 
-gulp.task('default', ['lint', 'browserify', 'uglify', 'minify']);
+// fonts
+gulp.task('fonts', function(){
+	return gulp.src('src/components/bootstrap/fonts/*')
+	.pipe(gulp.dest('public/fonts'));
+});
+
+gulp.task('default', ['lint', 'browserify', 'uglify', 'minify', 'fonts']);
