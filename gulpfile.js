@@ -20,10 +20,21 @@ gulp.task('browserify', function(){
 	return gulp.src(['src/js/main.js'])
 	.pipe(browserify())
 	.pipe(concat('bundle.js'))
+	.pipe(gulp.dest('public/js'));
+});
+
+// concat
+gulp.task('concat', function(){
+	return gulp.src([
+		'bower_components/angular/angular.js',
+		'bower_components/angular-ui-router/release/angular-ui-router.js'
+	])
+	.pipe(concat('libs.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('public/js'));
 });
 
+// uglify
 gulp.task('uglify', function(){
 	return gulp.src(['src/js/appInsights.js'])
 	.pipe(uglify())
@@ -33,8 +44,8 @@ gulp.task('uglify', function(){
 // minify
 gulp.task('minify', function(){
 	return gulp.src([
-		'src/components/bootstrap/less/bootstrap.less',
-		'src/components/angular-ui/build/angular-ui',
+		'bower_components/bootstrap/less/bootstrap.less',
+		'bower_components/angular-ui/build/angular-ui',
 		'src/less/app.less'
 	])
 	.pipe(less())
@@ -49,4 +60,4 @@ gulp.task('fonts', function(){
 	.pipe(gulp.dest('public/fonts'));
 });
 
-gulp.task('default', ['lint', 'browserify', 'uglify', 'minify', 'fonts']);
+gulp.task('default', ['lint', 'browserify', 'concat', 'uglify', 'minify', 'fonts']);
