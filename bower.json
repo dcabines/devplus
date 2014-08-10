@@ -5,6 +5,7 @@
 		"angular": "*",
 		"angular-ui": "*",
 		"angular-ui-router": "*",
-		"bootstrap": "*"
+		"bootstrap": "*",
+		"todomvc-common": "*"
 	}
 }

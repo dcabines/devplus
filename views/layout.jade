@@ -1,12 +1,13 @@
 doctype html
-html(lang='en', ng-app='devplus')
+html(lang='en' ng-app='devplus')
 	head
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		title dev+
 		meta(name='description', content='')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-		link(rel='stylesheet', href='css/bundle.css')
+		link(rel='stylesheet', href='/css/libs.css')
+		include style.html
 		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Pacifico|Roboto:300')
 		block styles
 		script
@@ -14,12 +15,10 @@ html(lang='en', ng-app='devplus')
 
 	body
 		include navbar.jade
-		div.container
-			div.row
-				div.col-md-12
-					block content
+		block content
 		include footer.jade
+		include templates.html
 
-		script(src='js/libs.js')
-		script(src='js/bundle.js')
+		script(src='/js/libs.js')
+		include script.html
 		block scripts
