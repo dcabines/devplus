@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>dev+</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico|Roboto:300" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      html {
+        height: 100%;
+        color: #333;
+        font-family: Roboto, sans-serif;
+        background-image: url(ricepaper.png);
+      }
+
+      body {
+        margin: 0;
+      }
+    </style>
+
+    
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-81c28ef8.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-60ec356f.js">
+		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-a01d40ba.js">
+		<link rel="modulepreload" href="/./_app/pages/index.svelte-d98b0831.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-1487912c.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/index.svelte-4b6fd674.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-81c28ef8.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/__layout.svelte-a01d40ba.js"),
+						import("/./_app/pages/index.svelte-d98b0831.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+  </head>
+  <body>
+    <div id="svelte">
+
+
+<nav class="svelte-uge3vv"><a href="/" class="svelte-uge3vv">dev+</a>
+	<a href="/about" class="svelte-uge3vv">about</a>
+	<a href="/todo" class="svelte-uge3vv">todo</a></nav>
+
+<div class="main svelte-uge3vv"><h1 class="svelte-101dfex">Devplus</h1>
+<p class="svelte-101dfex">Where I do things with stuff.</p></div>
+
+<footer class="svelte-uge3vv"><span>dev+ v0.0.3</span>
+</footer>
+
+
+
+	
+</div>
+  </body>
+</html>

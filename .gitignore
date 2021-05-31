@@ -1,2 +1,4 @@
-node_modules/*
-!node_modules/devplus
+.DS_Store
+node_modules
+/.svelte-kit
+/package
