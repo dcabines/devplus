@@ -1,6 +1,4 @@
 <script type="ts">
-  import "carbon-components-svelte/css/g10.css";
-
   import { Content, Grid, Row, Column } from "carbon-components-svelte";
 
   import ModalYouAreAWizard from "../../components/modal-you-are-a-wizard.svelte";
