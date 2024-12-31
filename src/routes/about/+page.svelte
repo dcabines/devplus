@@ -1,1 +1,0 @@
-<p>Current version is v0.0.5.</p>
